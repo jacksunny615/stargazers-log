@@ -1,0 +1,37 @@
+{
+  "events": [
+    {
+      "type": "starred",
+      "starredAt": "2026-10-28T14:20:00Z",
+      "repository": {
+        "name": "vite",
+        "owner": "vitejs",
+        "description": "Next generation frontend tooling.",
+        "language": "TypeScript",
+        "url": "https://github.com/vitejs/vite"
+      }
+    },
+    {
+      "type": "starred",
+      "starredAt": "2026-10-19T09:05:00Z",
+      "repository": {
+        "name": "TypeScript",
+        "owner": "microsoft",
+        "description": "TypeScript is a strongly typed programming language that builds on JavaScript.",
+        "language": "TypeScript",
+        "url": "https://github.com/microsoft/TypeScript"
+      }
+    },
+    {
+      "type": "starred",
+      "starredAt": "2026-10-06T17:42:00Z",
+      "repository": {
+        "name": "awesome",
+        "owner": "sindresorhus",
+        "description": "A curated list of awesome things.",
+        "language": "None",
+        "url": "https://github.com/sindresorhus/awesome"
+      }
+    }
+  ]
+}

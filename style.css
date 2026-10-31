@@ -1,0 +1,191 @@
+:root {
+  color-scheme: light;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #202b25;
+  background: #f5f7f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 82% 4%, rgba(198, 222, 189, 0.38), transparent 30rem),
+    #f5f7f2;
+}
+
+.page-shell {
+  width: min(100% - 40px, 760px);
+  margin: 0 auto;
+  padding: 82px 0 36px;
+}
+
+.page-header {
+  padding-bottom: 42px;
+}
+
+.eyebrow,
+.list-heading,
+.page-footer {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #54745c;
+}
+
+h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.intro {
+  margin: 16px 0 0;
+  color: #657069;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.list-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 0 12px;
+  color: #657069;
+  border-bottom: 1px solid #dce3db;
+}
+
+.list-heading span {
+  color: #4a8055;
+  font-size: 1rem;
+}
+
+.list-status {
+  margin: 20px 0;
+  color: #657069;
+  font-size: 0.9rem;
+}
+
+.repo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.repo-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px 24px;
+  padding: 22px 0 24px;
+  border-bottom: 1px solid #dce3db;
+  animation: rise-in 420ms ease both;
+}
+
+.repo-link {
+  width: fit-content;
+  color: #235a34;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.repo-link:hover {
+  color: #163d23;
+}
+
+.repo-owner {
+  color: #657069;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+}
+
+.repo-description {
+  grid-column: 1;
+  margin: 0;
+  color: #56625a;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.repo-meta {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 14px;
+  color: #657069;
+  font-size: 0.75rem;
+}
+
+.repo-language::before {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #7d9e71;
+  content: "";
+}
+
+.repo-date {
+  justify-self: end;
+  color: #657069;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.page-footer {
+  margin-top: 40px;
+  color: #7a857c;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    width: min(100% - 32px, 760px);
+    padding-top: 54px;
+  }
+
+  .repo-item {
+    gap: 7px 12px;
+  }
+
+  .repo-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
